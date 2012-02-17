@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Logan Koester"]
   s.email       = ["logan@logankoester.com"]
   s.homepage    = "https://github.com/agoragames/action_pusher"
-  s.summary     = %q{Render views to Pusher directly from a model}
-  s.description = %q{Render views to Pusher directly from a model}
+  s.summary     = %q{Render views to Pusher from anywhere in your application}
+  s.description = %q{Render views to Pusher from anywhere in your application}
 
   s.rubyforge_project = "action_pusher"
 
