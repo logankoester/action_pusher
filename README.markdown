@@ -4,7 +4,7 @@
 [Pusher](http://pusher.com/) users often want to transmit JSON or HTML to the browser upon model events, but models have no business generating either. ActionPusher allows you to render data to Pusher using your existing view templates from an observer or model.
 
 ## Requirements
-* Rails 3.1
+* Rails > 3.1
 * [Pusher gem](http://rubygems.org/gems/pusher)
 
 ## Installation
@@ -31,7 +31,7 @@ Create a directory at **app/pushers** to store your ActionPusher "controllers".
         channel = @notification.notification_channel.name
         Pushable.push(channel, event, render(template: 'notifications/show'))
       end
-    
+
       def controller_path; 'notifications'; end
     end
 
