@@ -23,4 +23,7 @@ gemfile:
   - gemfiles/4.0.gemfile
   - gemfiles/4.1.gemfile
 
-cache: bundler
+install:
+  - "travis_retry bundle install"
+
+script: "bundle exec rake spec"
