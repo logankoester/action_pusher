@@ -2,3 +2,4 @@
 .bundle
 *emfile.lock
 pkg/*
+.rvmrc
