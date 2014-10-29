@@ -7,17 +7,8 @@ require 'action_pusher/testing/application'
 
 ActionPusher::Testing::Application.load_tasks
 
-task :default => [:all]
-
-task :all do |t|
-  if ENV['BUNDLE_GEMFILE']
-    exec('rake spec')
-  else
-    exec("rm gemfiles/*.lock")
-    Rake::Task["appraisal:gemfiles"].execute
-    Rake::Task["appraisal:install"].execute
-    exec('rake appraisal')
-  end
+task :spec do
+  exec('rspec spec')
 end
 
-RSpec::Core::RakeTask.new(:spec)
+task :default => :spec
