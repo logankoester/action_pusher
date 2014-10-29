@@ -25,6 +25,9 @@ module ActionPusher
       config.paths['app/controllers'] << "#{APP_ROOT}/app/controllers"
       config.paths['app/helpers'] << "#{APP_ROOT}/app/helpers"
       config.paths['app/views'] << "#{APP_ROOT}/app/views"
+
+      config.autoload_paths += Dir["#{APP_ROOT}/app/pushers"]
+
       config.paths['config/database'] = "#{APP_ROOT}/config/database.yml"
       config.paths['log'] = 'tmp/log/development.log'
       config.secret_token = 'SECRET_TOKEN_IS_MIN_30_CHARS_LONG'

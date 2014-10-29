@@ -11,6 +11,9 @@ require 'rspec/rails'
 
 Bundler.require
 
+ActionPusher::Base.view_paths = File.join(PROJECT_ROOT, 'lib',
+  'action_pusher/testing/app/views')
+
 ActionPusher::Testing::Application.initialize!
 
 RSpec.configure do |config|
