@@ -46,6 +46,9 @@ GEM
     hike (1.2.3)
     httpclient (2.5.1)
     i18n (0.6.11)
+    jbuilder (2.2.4)
+      activesupport (>= 3.0.0, < 5)
+      multi_json (~> 1.2)
     journey (1.0.4)
     json (1.8.1)
     mail (2.5.4)
@@ -124,6 +127,7 @@ DEPENDENCIES
   action_pusher!
   actionpack (~> 3.2.0)
   appraisal
+  jbuilder
   railties (~> 3.2.0)
   rake
   rspec
