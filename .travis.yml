@@ -1,0 +1,26 @@
+language: ruby
+
+bundler_args: ''
+
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1.0
+  - ruby-head
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+
+gemfile:
+  - gemfiles/rails_3_1.gemfile
+  - gemfiles/rails_3_2.gemfile
+  - gemfiles/rails_4_0.gemfile
+  - gemfiles/rails_4_1.gemfile
+
+install:
+  - "bundle install"
+
+cache: bundler
+
+script: "bundle exec rake spec"
